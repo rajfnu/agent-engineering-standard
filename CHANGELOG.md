@@ -6,6 +6,8 @@ follows [Semantic Versioning](VERSIONING.md).
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-09-23
+
 ### Fixed
 
 - `CLAUDE.md` was a prose pointer (`See AGENTS.md`). Because a `CLAUDE.md` exists, Claude
@@ -71,5 +73,6 @@ Initial public release.
 - Scope and test-impact selection are heuristic unless a repository brings its own
   affected-graph tooling.
 
-[Unreleased]: https://github.com/rajfnu/agent-engineering-standard/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/rajfnu/agent-engineering-standard/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/rajfnu/agent-engineering-standard/releases/tag/v0.1.1
 [0.1.0]: https://github.com/rajfnu/agent-engineering-standard/releases/tag/v0.1.0

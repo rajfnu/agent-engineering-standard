@@ -8,7 +8,7 @@
     {
       "name": "agent-engineering-standard",
       "description": "Portable engineering Skills for coding agents: architecture, code quality, UX, scoped testing, repository hygiene, and low-context development.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./"
     }
   ]

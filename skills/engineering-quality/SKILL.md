@@ -4,7 +4,7 @@ description: Universal engineering standard for making changes to a codebase —
 license: Apache-2.0
 metadata:
   standard: agent-engineering-standard
-  version: 0.1.0
+  version: 0.1.1
 ---
 
 # Engineering Quality
