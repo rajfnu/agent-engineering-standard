@@ -6,6 +6,12 @@ follows [Semantic Versioning](VERSIONING.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Corrected the published first-party always-on figure from ~817 to ~777 tokens. The 817
+  measurement was taken before the `engineering-review` command was removed in 0.1.1, so it
+  still counted the duplicate component.
+
 ## [0.1.1] — 2026-09-23
 
 ### Fixed
