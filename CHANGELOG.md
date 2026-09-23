@@ -6,6 +6,24 @@ follows [Semantic Versioning](VERSIONING.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- `CLAUDE.md` was a prose pointer (`See AGENTS.md`). Because a `CLAUDE.md` exists, Claude
+  Code reads it *instead of* `AGENTS.md`, so contributors got one line rather than the
+  repository's instructions. Replaced with an `@AGENTS.md` import, which also covers Claude
+  Code before v2.1.277 and sessions that cannot read `AGENTS.md` directly.
+- Removed `commands/engineering-review.md`. It collided with the `engineering-review`
+  skill — both resolve under the same `/plugin-name:` namespace — and, since skills are
+  user-invocable already, it only forwarded to the skill, which ADR-0001 forbids.
+  `/engineering-review` still works, as the skill.
+
+### Changed
+
+- Token figures cross-checked against Claude Code's own estimator. `chars/4` under-reads a
+  real tokenizer by roughly 25–45%, so it is now presented as a portable **lower bound**
+  rather than a measurement, with the first-party numbers published alongside in
+  `evals/RESULTS.md`.
+
 ## [0.1.0] — 2026-09-23
 
 Initial public release.

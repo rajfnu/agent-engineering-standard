@@ -32,3 +32,8 @@ that point at that directory. No adapter contains engineering instructions.
   must stand alone.
 - We accept that slash commands are Claude-Code-flavoured; they are convenience, not the
   product.
+- A command may not share a name with a skill — both resolve under the same
+  `/plugin-name:` namespace, so the pair is ambiguous. Since skills are user-invocable
+  already, a command that only forwards to a same-named skill is both a collision and the
+  duplication this ADR forbids. Commands exist only where they route somewhere a skill
+  name does not.

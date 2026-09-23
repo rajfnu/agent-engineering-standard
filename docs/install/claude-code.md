@@ -7,11 +7,13 @@
 /plugin install agent-engineering-standard@agent-engineering-standard
 ```
 
-This registers the three Skills plus four slash commands:
+This registers the three Skills plus three slash commands. Skills are user-invocable in
+their own right, so the review pipeline is reached through the skill itself — there is no
+separate command wrapping it, which would collide with the skill's name.
 
-| Command | Does |
+| Invoke | Does |
 |---|---|
-| `/engineering-review [target]` | full review pipeline on a branch, PR, or path |
+| `/engineering-review [target]` | the skill: full review pipeline on a branch, PR, or path |
 | `/architecture-review [target]` | boundaries, contracts, dependency direction only |
 | `/reconcile-repo [path]` | inventory repository drift with evidence |
 | `/ux-review [target]` | frontend journey, states, accessibility, component quality |
