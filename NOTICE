@@ -1,0 +1,22 @@
+Agent Engineering Standard
+Copyright 2026 Agent Engineering Standard contributors
+
+Licensed under the Apache License, Version 2.0 (the "License").
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+All content in this repository is original work.
+
+This project references and integrates with, but does not vendor, fork, or copy code or
+text from, the following projects:
+
+  - OpenCodeReview (https://github.com/alibaba/open-code-review), Apache-2.0,
+    Copyright Alibaba. Invoked as an external CLI (`ocr`); no source is included here.
+  - Superpowers (https://github.com/obra/superpowers), MIT, Copyright Jesse Vincent.
+    Referenced and recommended as a complementary skills collection.
+  - Everything Claude Code (https://github.com/affaan-m/everything-claude-code), MIT.
+    Referenced as a source of optional à-la-carte specialist capabilities.
+  - Claude Code Templates (https://github.com/davila7/claude-code-templates), MIT.
+    Installation commands documented for optional specialist skills.
+
+If code or text from any third party is ever added to this repository, its license and
+attribution requirements must be recorded in this file.

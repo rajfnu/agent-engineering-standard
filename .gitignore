@@ -1,0 +1,14 @@
+# Agent scratch space: OpenCodeReview output, session files, working notes.
+# Nothing here is a source of truth. See docs/decisions/ and the reconciliation reference.
+.aes/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python bytecode from tools/
+__pycache__/
+*.pyc

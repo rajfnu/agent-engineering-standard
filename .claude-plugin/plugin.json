@@ -1,0 +1,21 @@
+{
+  "name": "agent-engineering-standard",
+  "version": "0.1.0",
+  "description": "Portable engineering Skills for coding agents: architecture, code quality, UX, scoped testing, repository hygiene, and low-context development.",
+  "author": {
+    "name": "Agent Engineering Standard contributors"
+  },
+  "homepage": "https://github.com/rajfnu/agent-engineering-standard",
+  "repository": "https://github.com/rajfnu/agent-engineering-standard",
+  "license": "Apache-2.0",
+  "keywords": [
+    "skills",
+    "architecture",
+    "code-review",
+    "testing",
+    "ux",
+    "context-engineering"
+  ],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}
