@@ -36,13 +36,28 @@ Estimated tokens (characters ÷ 4 — an approximation, not a tokenizer), as of 
 | L1 | one `SKILL.md` | when that skill is invoked |
 | L2 | one `references/` file | when the task hits that concern |
 
-A typical task pays **L0 for all three skills + L1 for one skill + one L2 file**. For an
-implementation task hitting architecture, that is roughly 569 + 2,016 + 944 ≈ **3,500
-tokens**. Loading the entire standard — every skill and every reference — would be about
-**14,000 tokens**, which is what a single-large-prompt design would cost on every request.
+A typical task pays **L0 for all three skills + L1 for one skill + one L2 file**. Loading the
+entire standard — every skill and every reference — costs roughly 3× that, which is what a
+single-large-prompt design would pay on every request.
 
 The ratio is the design working. The absolute number is small enough not to matter much;
 the point is that it does not grow with the parts of the standard a task does not use.
+
+### Cross-checked against a real tokenizer
+
+`chars/4` is a portable approximation, so it was checked against Claude Code's own estimator
+on the installed plugin (`claude plugin details agent-engineering-standard`):
+
+| | this tool (`chars/4`) | Claude Code estimator |
+|---|---|---|
+| always-on (all components) | ~569 | ~817 |
+| `engineering-quality` on-invoke | ~2,016 | ~2,500 |
+| `engineering-review` on-invoke | ~1,570 | ~1,900 |
+| `core-domain-tenant` on-invoke | ~1,040 | ~1,200 |
+
+`chars/4` under-reads by roughly 25–45%. It is kept as the CI check because it is
+agent-agnostic and needs nothing installed — but it is a **lower bound**, not a measurement,
+and the tables above should be read that way.
 
 ### What this does not show
 

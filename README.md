@@ -70,9 +70,14 @@ Estimated tokens (chars ÷ 4), reproducible with `python3 tools/measure_context.
 | **all** | **~569** | **~4626** | **~9489** | 12 | |
 <!-- MEASUREMENTS:END -->
 
-A typical implementation task pays L0 for all three skills, L1 for one, and one L2 file —
-roughly **3,500 tokens**. Loading everything would be about **14,000**, which is what a
-single-large-prompt design costs on *every* request.
+A typical implementation task pays L0 for all three skills, L1 for one, and one L2 file.
+Loading everything would cost roughly 3× that — which is what a single-large-prompt design
+pays on *every* request.
+
+Verified against Claude Code's own estimator (`claude plugin details`), which reports
+**~817 tokens always-on** for the whole plugin and ~1.2k–2.5k on-invoke per skill. Treat the
+`chars/4` table as a portable lower bound: it runs without any agent installed, but it
+under-reads a real tokenizer by roughly 25–45%.
 
 CI enforces the budget: `tools/validate_skills.py` fails if a `SKILL.md` exceeds 200 lines,
 if a description is under 120 characters or never says when *not* to use the skill, or if a
@@ -87,7 +92,8 @@ reference file is orphaned or a reference link dangles.
 /plugin install agent-engineering-standard@agent-engineering-standard
 ```
 
-Adds `/engineering-review`, `/architecture-review`, `/reconcile-repo`, `/ux-review`.
+The three Skills are user-invocable directly (`/engineering-review`), plus three commands
+that route into specific references: `/architecture-review`, `/reconcile-repo`, `/ux-review`.
 Details and project-local installs: **[docs/install/claude-code.md](docs/install/claude-code.md)**
 
 ### Codex
