@@ -75,7 +75,7 @@ Loading everything would cost roughly 3× that — which is what a single-large-
 pays on *every* request.
 
 Verified against Claude Code's own estimator (`claude plugin details`), which reports
-**~817 tokens always-on** for the whole plugin and ~1.2k–2.5k on-invoke per skill. Treat the
+**~777 tokens always-on** for the whole plugin and ~1.2k–2.5k on-invoke per skill. Treat the
 `chars/4` table as a portable lower bound: it runs without any agent installed, but it
 under-reads a real tokenizer by roughly 25–45%.
 

@@ -50,7 +50,7 @@ on the installed plugin (`claude plugin details agent-engineering-standard`):
 
 | | this tool (`chars/4`) | Claude Code estimator |
 |---|---|---|
-| always-on (all components) | ~569 | ~817 |
+| always-on (all components) | ~569 | ~777 |
 | `engineering-quality` on-invoke | ~2,016 | ~2,500 |
 | `engineering-review` on-invoke | ~1,570 | ~1,900 |
 | `core-domain-tenant` on-invoke | ~1,040 | ~1,200 |
