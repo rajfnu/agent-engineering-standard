@@ -1,6 +1,6 @@
 {
   "name": "agent-engineering-standard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Portable engineering Skills for coding agents: architecture, code quality, UX, scoped testing, repository hygiene, and low-context development.",
   "author": {
     "name": "Agent Engineering Standard contributors"
